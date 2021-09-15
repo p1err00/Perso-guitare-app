@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="card" *ngFor="let note of notes" (click)="develop(element)" #card>
+
+            <div class="card-header">
+                {{note.name}}
+            </div>
+
+            <div class="card-body" #element>
+                <div class="col">
+                    <div class="content">
+                        <span>Corde : {{note.posX}}</span>
+                        <span>Case : {{note.posY}}</span>
+                        <span>frequence : {{note.frequence}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="gammes" *ngFor="let gamme of note.gammes">
+                    {{gamme}}
+                </div>
+                <div class="accords" *ngFor="let accord of note.accords">
+                    {{accord}}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        height: 100vh;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .card {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .gamme{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+</style>

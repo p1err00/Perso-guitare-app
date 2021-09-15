@@ -1,5 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { NotesComponent } from './notes/notes.component'
+import { AccordsComponent } from './accords/accords.component'
+import { GammesComponent } from './gammes/gammes.component'
+import { MenuComponent } from './menu/menu.component'
 
 describe('AppComponent', () => {
   beforeEach(async () => {
